@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: black;
+}
+.logo {
+    color: red;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background: rgba(0,0,0,0.7);
+}
+
+.main-header-left ul,
+.main-header-right ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero-section {
+  height: 80vh;
+  position: relative;
+}
+
+.hero-section video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.main-hero {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;   
+  align-items: flex-start;    
+
+  padding: 0 0 120px 60px;     
+  color: white;
+}
+
+
+.upper-main-hero {
+  color: white;
+  max-width: 500px;
+}
+
+/* MOVIE ROW */
+.movie-row {
+  color: white;
+  margin-top: 20px;
+  padding-left: 60px;
+}
+
+.movie-row h2 {
+  margin-bottom: 15px;
+}
+
+
+.row-posters {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.row-posters::-webkit-scrollbar {
+  display: none;
+}
+
+.poster {
+  position: relative;
+  min-width: 250px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.poster img {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+}
+
+
+.poster i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: white;
+
+  opacity: 0 !important;  
+  transition: 0.3s;
+}
+
+
+.poster:hover {
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+
+.poster:hover i {
+  opacity: 1 !important;
+  visibility: visible;
+}
